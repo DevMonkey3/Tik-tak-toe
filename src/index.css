@@ -1,0 +1,48 @@
+/* Apply full screen size to body */
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222; /* Dark background */
+}
+
+/* This styles the container that holds all the rows */
+.board-row {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+/* This styles each individual square button */
+.square {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0.2); /* Glass-like transparent background */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Light border for glass look */
+  border-radius: 15px; /* Round corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease, border 0.3s ease;
+  backdrop-filter: blur(5px); /* Adds blur effect behind the glass-like square */
+}
+
+/* When hovering over a square */
+.square:hover {
+  background-color: rgba(0, 0, 0, 0.4); /* Darkens on hover, more "pressed" glass effect */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Glowing effect */
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Slightly brighter border */
+  transform: translateY(3px); /* Slight "press" effect when clicked */
+}
+
+/* When square is clicked or active, further simulate the pressed effect */
+.square:active {
+  background-color: rgba(0, 0, 0, 0.6); /* Darker when clicked */
+  transform: translateY(5px); /* Simulate a deeper press */
+}
